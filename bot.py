@@ -20,7 +20,7 @@ def start(client, message):
   me = client.get_me()
   message.reply_text("Hᴇʟʟᴏ {message.from_user.mention}, I Aᴍ {me.mention}!")
   
-mxabot.add_handler(commands.handler)
+#mxabot.add_handler(commands.handler)
 
 if __name__ == "__main__":
   mxabot.run()
