@@ -9,6 +9,10 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 
 mxabot = Client('Mxa_Movies_Bot', api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
+@mxabot.on_message(filters.private)
+async def hello(client, message):
+    await message.reply("Hello {message.from_user.mention!!")
+  
 mxabot.add_handler(commands.handler)
 
 if __name__ == "__main__":
