@@ -12,7 +12,7 @@ mxabot = Client('Mxa_Movies_Bot', api_id=API_ID, api_hash=API_HASH, bot_token=BO
 
 @mxabot.on_message(filters.private)
 async def hello(client, message):
-    await message.reply("Hello {message.from_user.mention!!")
+    await message.reply("Hello {message.from_user.mention}!!")
 
 
 @mxabot.on_message(filters.command('start'))
