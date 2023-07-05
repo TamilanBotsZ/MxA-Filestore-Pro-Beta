@@ -7,9 +7,9 @@ from pyrogram.types import (
     CallbackQuery,
     Message
 )
-from pyrogram.errors import QueryIdInvalid
+#from pyrogram.errors import QueryIdInvalid
 
-START_TEXT = "Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!"
+START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 
 @mxabot.on_message(filters.command('start'))
 def start(client, message):
@@ -31,9 +31,10 @@ def start(client, message):
 @mxabot.on_callback_query(filters.regex('^delete$'))
 async def delete_button(bot: Client, query: CallbackQuery):
     await query.message.delete(true)
- try:
-  await query.answer()
- except QueryIdInvalid: pass
+    return
+# try:
+ # await query.answer()
+# except QueryIdInvalid: pass
 
 
 
