@@ -13,7 +13,7 @@ START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ B
 
 @mxabot.on_message(filters.command('start'))
 def start(client, message):
- await message.delete()
+ message.delete()
  # me = self.get_me()
  message.reply_text(
   START_TEXT.format(cmd.from_user.mention),
