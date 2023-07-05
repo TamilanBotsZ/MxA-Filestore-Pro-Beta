@@ -4,7 +4,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     CallbackQuery,
-    Message
+    Message,
 )
 from plugins.commands import start
 from plugins.forcesub import FSUB_CHANNEL
@@ -21,7 +21,7 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
         try:
             user = bot.get_chat_member(FSUB_CHANNEL, query.from_user.id)
             if user.status == "banned":
-                await query.reply_text("Sorry you are banned 🥲")
+                await bot.reply_text("Sorry you are banned 🥲")
                 await rfrsh_msg.delete()
                 return
         except UserNotParticipant:
@@ -39,4 +39,6 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
                 )
             )
             await rfrsh_msg.delete()
-            return start
+            return
+
+        await query.answer(url="https://t.me/NG_FilestoreBot?start")
