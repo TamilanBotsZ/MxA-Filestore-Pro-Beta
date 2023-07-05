@@ -18,7 +18,7 @@ async def force_sub(client, message, fsub: int):
                    InlineKeyboardButton("Join Channel 📣", url=f"t.me/NG_Bots")
                 ],
                 [
-                    InlineKeyboardButton("Refresh 🔄", callback_data="refreshfsub")
+                    InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
                
             ]
         )
