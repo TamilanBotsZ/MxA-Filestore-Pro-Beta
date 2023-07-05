@@ -37,5 +37,5 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
                     ]
                 )
             )
+            await rfrsh_msg.delete()
             return start
-    await rfrsh_msg.delete()
