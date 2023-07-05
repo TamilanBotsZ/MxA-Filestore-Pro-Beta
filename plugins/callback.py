@@ -15,9 +15,5 @@ async def delete_button(bot: Client, query: CallbackQuery):
     return
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
-async def rfrsh_button(bot: Client, query: CallbackQuery):
-    if UserNotParticipant:
-        await query.answer("Please join the channel first, then click the button", show_alert=True)
-        return
-
+async def rfrsh_button(bot: Client, query: CallbackQuery)
     await query.answer(url="https://t.me/NG_FilestoreBot?start=start")
