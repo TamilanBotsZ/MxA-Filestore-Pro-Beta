@@ -7,20 +7,20 @@ async def force_sub(client, message, fsub: int):
         try:
             user = client.get_chat_member(fsub, message.from_user.id)
             if user.status == "kicked out":
-                message.reply_text("Sorry you are banned 🥲")
+                message.reply_text("Sorry, you are banned 🥲")
                 return
         except UserNotParticipant:
             message.reply_text(
-                text="Hey bruh you have to subscribe my update channel to use me",
+                text="Hey bruh, you have to subscribe to my update channel to use me",
                 reply_markup=InlineKeyboardMarkup(
-                [
-                [
-                   InlineKeyboardButton("Join Channel 📣", url=f"t.me/NG_Bots")
-                ],
-                [
-                    InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
-               
-            ]
-        )
-    )
+                    [
+                        [
+                            InlineKeyboardButton("Join Channel 📣", url="t.me/NG_Bots")
+                        ],
+                        [
+                            InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
+                        ]
+                    ]
+                )
+            )
             return
