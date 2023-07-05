@@ -8,6 +8,7 @@ from pyrogram.types import (
 )
 from pyrogram.errors import UserNotParticipant
 from plugins.forcesub import FSUB_CHANNEL
+from commands import START_TEXT
 
 @mxabot.on_callback_query(filters.regex('^delete$'))
 async def delete_button(bot: Client, query: CallbackQuery):
