@@ -13,8 +13,9 @@ fsub = -1001974852033
 
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
-    await force_sub(client, message, fsub=fsub)
-    return
+    fsub = await force_sub(client, message, fsub=fsub)
+    if fsub == 400:
+        return
     await message.delete()
     # me = self.get_me()
     await message.reply_text(
