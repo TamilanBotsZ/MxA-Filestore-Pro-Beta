@@ -1,15 +1,12 @@
 from bot import mxabot
 from pyrogram import Client, filters
-#from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     CallbackQuery,
     Message
 )
-#from plugins.forcesub import force_sub
 from plugins.forcesub import force_sub
-#from pyrogram.errors import QueryIdInvalid
 
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 fsub = -1001974852033
@@ -36,9 +33,6 @@ return
 async def delete_button(bot: Client, query: CallbackQuery):
     await query.message.delete(True)
     return
-# try:
- # await query.answer()
-# except QueryIdInvalid: pass
 
 
 
