@@ -51,5 +51,5 @@ class mxabot(Client):
 
 
 if __name__ == "__main__":
-  app = mxabot
+  app = mxabot()
   app.run()
