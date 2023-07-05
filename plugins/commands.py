@@ -7,6 +7,7 @@ from pyrogram.types import (
     CallbackQuery,
     Message
 )
+from plugins.forcesub import force_sub
 #from pyrogram.errors import QueryIdInvalid
 
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
