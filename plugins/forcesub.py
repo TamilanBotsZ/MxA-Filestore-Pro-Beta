@@ -17,7 +17,7 @@ async def force_sub(client, message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Join Channel 📣", url="t.me/{FSUB_CHANNEL}"),
+                            InlineKeyboardButton("Join Channel 📣", url="t.me/NG_BotS"),
                             InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
                         ]
                     ]
