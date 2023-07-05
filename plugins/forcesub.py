@@ -23,3 +23,4 @@ async def force_sub(client, message, fsub: int):
             ]
         )
     )
+            return
