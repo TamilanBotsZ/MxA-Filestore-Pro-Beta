@@ -7,5 +7,6 @@ from pyrogram.types import Message #,InlineKeyboardMarkup, InlineKeyboardButton
 
 @mxabot.on_message(filters.command('start'))
 def start(client, message):
+ await message.delete()
  # me = self.get_me()
-  message.reply_text("Hᴇʟʟᴏ {message.from_user.mention}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!")
+ message.reply_text("Hᴇʟʟᴏ {message.from_user.mention}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!")
