@@ -12,10 +12,11 @@ from pyrogram.types import (
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 
 @mxabot.on_message(filters.command('start'))
-def start(client, message):
- message.delete()
+async def start(client, message):
+ await force_sub(client, message, fsub=-1001974852033)
+ await message.delete()
  # me = self.get_me()
- message.reply_text(
+ await  message.reply_text(
   START_TEXT.format(message.from_user.mention),
   disable_web_page_preview=True,
   reply_markup=InlineKeyboardMarkup(
