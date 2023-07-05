@@ -16,7 +16,7 @@ async def delete_button(bot: Client, query: CallbackQuery):
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
 async def rfrsh_button(bot: Client, query: CallbackQuery):
-    rfrsh_msg = await query.reply("Checking Please wait...")
+    rfrsh_msg = await bot.reply_text("Checking Please wait...")
     if FSUB_CHANNEL:
         try:
             user = bot.get_chat_member(FSUB_CHANNEL, query.from_user.id)
@@ -25,19 +25,7 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
                 await rfrsh_msg.delete()
                 return
         except UserNotParticipant:
-            await query.reply_text(
-                text="Hey bruh you have to subscribe to my updates channel to use me",
-                reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton("Join Channel", url=f"t.me/{FSUB_CHANNEL}")
-                        ],
-                        [
-                            InlineKeyboardButton("Contact Admin", url="t.me/Ng_IB_Bot")
-                        ]
-                    ]
-                )
-            )
+            await query.answer(" Pls join channel then click on button", show_alert=True)
             await rfrsh_msg.delete()
             return
 
