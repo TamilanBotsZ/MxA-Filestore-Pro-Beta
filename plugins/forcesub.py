@@ -8,7 +8,7 @@ async def force_sub(client, message):
     if FSUB_CHANNEL:
         try:
             user = await client.get_chat_member(FSUB_CHANNEL, message.from_user.id)
-            if user.status == "kicked out":
+            if user.status == "kicked":
                 await message.reply_text("Sorry, you are banned 🥲")
                 return 400
         except UserNotParticipant:
@@ -23,5 +23,5 @@ async def force_sub(client, message):
                     ]
                 )
             )
-            return 200
+            return 400
     return 200
