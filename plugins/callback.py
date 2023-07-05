@@ -16,12 +16,12 @@ async def delete_button(bot: Client, query: CallbackQuery):
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
 async def rfrsh_button(bot: Client, query: CallbackQuery):
-    rfrsh_msg = await bot.reply_text("Checking Please wait...")
+    rfrsh_msg = await message.reply_text("Checking Please wait...")
     if FSUB_CHANNEL:
         try:
             user = bot.get_chat_member(FSUB_CHANNEL, query.from_user.id)
             if user.status == "banned":
-                await bot.reply_text("Sorry you are banned 🥲")
+                await message.reply_text("Sorry you are banned 🥲")
                 await rfrsh_msg.delete()
                 return
         except UserNotParticipant:
