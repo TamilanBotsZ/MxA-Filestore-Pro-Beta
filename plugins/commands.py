@@ -30,7 +30,7 @@ def start(client, message):
 
 @mxabot.on_callback_query(filters.regex('^delete$'))
 async def delete_button(bot: Client, query: CallbackQuery):
-    await query.message.delete()
+    await query.message.delete(True)
     return
 # try:
  # await query.answer()
