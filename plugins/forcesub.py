@@ -2,25 +2,26 @@ from pyrogram import Client
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram.errors import UserNotParticipant
 
-async def force_sub(client, message, fsub: int):
-    if fsub:
+
+FSUB_CHANNEL = "NG_BotS"
+async def force_sub(client, message):
+    if FSUB_CHANNEL:
         try:
-            user = await client.get_chat_member(fsub, message.from_user.id)
+            user = await client.get_chat_member(FSUB_CHANNEL, message.from_user.id)
             if user.status == "kicked out":
                 await message.reply_text("Sorry, you are banned 🥲")
-                return
+                return 400
         except UserNotParticipant:
             await message.reply_text(
                 text="Hey bruh, you have to subscribe to my update channel to use me",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("Join Channel 📣", url="t.me/NG_Bots")
-                        ],
-                        [
+                            InlineKeyboardButton("Join Channel 📣", url="t.me/{FSUB_CHANNEL}"),
                             InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
                         ]
                     ]
                 )
             )
-            return
+            return 200
+    return 200
