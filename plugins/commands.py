@@ -12,7 +12,7 @@ from plugins.forcesub import force_sub
 #from pyrogram.errors import QueryIdInvalid
 
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
-fsub = NG_BotS
+fsub = -1001974852033
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
  await force_sub(client, message, fsub=fsub)
