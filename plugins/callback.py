@@ -41,4 +41,4 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
             await rfrsh_msg.delete()
             return
 
-        await query.answer(url="https://t.me/NG_FilestoreBot?start")
+        await query.answer(url="https://t.me/NG_FilestoreBot?start=start")
