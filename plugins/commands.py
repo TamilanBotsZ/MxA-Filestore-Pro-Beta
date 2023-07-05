@@ -16,7 +16,7 @@ def start(client, message):
  message.delete()
  # me = self.get_me()
  message.reply_text(
-  START_TEXT.format(cmd.from_user.mention),
+  START_TEXT.format(message.from_user.mention),
   disable_web_page_preview=True,
   reply_markup=InlineKeyboardMarkup(
    [
