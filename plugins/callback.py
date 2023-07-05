@@ -4,7 +4,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     CallbackQuery,
-    Message,
+    Message
 )
 from plugins.commands import start
 from plugins.forcesub import FSUB_CHANNEL
@@ -15,7 +15,7 @@ async def delete_button(bot: Client, query: CallbackQuery):
     return
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
-async def rfrsh_button(bot: Client, query: CallbackQuery, message):
+async def rfrsh_button(bot: Client, query: CallbackQuery, message: Message):
     rfrsh_msg = await message.reply_text("Checking Please wait...")
     if FSUB_CHANNEL:
         try:
