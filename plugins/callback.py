@@ -21,7 +21,7 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
             user = await bot.get_chat_member(FSUB_CHANNEL.id, query.message.chat.id)
             if user.status == "banned":
                 await query.message.edit(
-                    text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/TeleRoid14).",
+                    text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Ng_SupportS).",
                     disable_web_page_preview=True
                 )
                 return
