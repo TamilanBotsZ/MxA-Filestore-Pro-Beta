@@ -21,7 +21,7 @@ async def force_sub(client, message):
                             InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306")
                         ],
                         [
-                            InlineKeyboardButton("Refresh 🔄", callback_data="refreshfsub")
+                            InlineKeyboardButton("Refresh 🔄", callback_data="rfrsh")
                         ]
                     ]
                 )
