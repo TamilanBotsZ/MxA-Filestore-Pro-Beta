@@ -12,10 +12,10 @@ START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ B
 
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
+    await message.delete()
     fsub = await force_sub(client, message)
     if fsub == 400:
         return
-    await message.delete()
     # me = self.get_me()
     await message.reply_text(
         START_TEXT.format(message.from_user.mention),
