@@ -3,7 +3,8 @@ from pyrogram import Client, filters
 from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
-    Message,
+    CallbackQuery,
+    Message
 )
 from plugins.commands import start
 from plugins.forcesub import FSUB_CHANNEL
