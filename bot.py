@@ -4,7 +4,7 @@ import os
 from os import getenv
 import logging
 import logging.config
-#from MxA.bot.plugins import commands
+
 
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
@@ -21,20 +21,9 @@ class mxabot(Client):
             workers=300,
             plugins={"root": "plugins"},
             sleep_threshold=10,
+            in_memory=True
         )
-#Client('Mxa_Movies_Bot', api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="plugins"))
 
-#@mxabot.on_message(filters.private)
-#async def hello(client, message):
-  #  await message.reply("Hello {message.from_user.mention}!!")
-
-
-#@mxabot.on_message(filters.command('start'))
-#def start(client, message):
-#  me = client.get_me()
-#  message.reply_text("Hᴇʟʟᴏ {message.from_user.mention}, I Aᴍ {me.mention}!")
-  
-#mxabot.add_handler(commands.handler)
     async def start(self):
       await super().start()
       logging.info('Bot started')
