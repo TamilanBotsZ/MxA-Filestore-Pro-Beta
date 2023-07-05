@@ -6,7 +6,7 @@ from pyrogram.types import (
     Message,
 )
 from plugins.commands import start
-from plugins.commands import FSUB_CHANNEL
+from plugins.forcesub import FSUB_CHANNEL
 
 @mxabot.on_callback_query(filters.regex('^delete$'))
 async def delete_button(bot: Client, query: CallbackQuery):
