@@ -15,7 +15,7 @@ async def delete_button(bot: Client, query: CallbackQuery):
     return
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
-async def rfrsh_button(bot: Client, query: CallbackQuery):
+async def rfrsh_button(bot: Client, query: CallbackQuery, message):
     rfrsh_msg = await message.reply_text("Checking Please wait...")
     if FSUB_CHANNEL:
         try:
