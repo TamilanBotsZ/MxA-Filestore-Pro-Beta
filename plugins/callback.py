@@ -48,7 +48,7 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
    #         )
             return
 
-    await message.delete()
+    await query.message.delete(True)
     await query.reply.message.edit(
         START_TEXT.format(message.from_user.mention),
         disable_web_page_preview=True,
