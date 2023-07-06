@@ -40,12 +40,12 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
                     ]
                 )
             )
-            return
-        except Exception:
-            await query.message.edit(
-                text="Something went Wrong. Contact my [Support](https://t.me/NG_ib_bot).",
-                disable_web_page_preview=True
-            )
+           # return
+       # except Exception:
+     #       await query.message.edit(
+     #           text="Something went Wrong. Contact my [Support](https://t.me/NG_ib_bot).",
+   #             disable_web_page_preview=True
+   #         )
             return
 
     await message.delete()
