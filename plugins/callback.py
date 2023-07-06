@@ -19,7 +19,7 @@ async def delete_button(bot: Client, query: CallbackQuery):
 async def rfrsh_button(bot: Client, query: CallbackQuery):
     if FSUB_CHANNEL:
         try:
-            user = await bot.get_chat_member(FSUB_CHANNEL.id, query.message.chat.id)
+            user = await bot.get_chat_member(FSUB_CHANNEL, query.message.chat.id)
             if user.status == "banned":
                 await query.message.edit(
                     text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/Ng_SupportS).",
