@@ -49,7 +49,7 @@ async def rfrsh_button(bot: Client, query: CallbackQuery):
             return
 
     await query.message.edit(
-        START_TEXT.format(message.from_user.mention),
+        START_TEXT.format(query.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
