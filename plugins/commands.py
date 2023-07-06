@@ -1,4 +1,5 @@
 from bot import mxabot
+from handlers.adduser import add_user_in_db
 from pyrogram import Client, filters
 from pyrogram.types import (
     InlineKeyboardMarkup,
