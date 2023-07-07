@@ -8,4 +8,4 @@ class Config(object):
 	#DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-100"))
 	#BOT_OWNER = int(os.environ.get("BOT_OWNER", "1445283714"))
 	DATABASE_URL = os.environ.get("DATABASE_URL")
-        LOG_CHANNEL = os.environ.get("LOG_CHANNEL", None)
+        LOG_CHANNEL = os.environ.get("LOG_CHANNEL")
