@@ -13,8 +13,7 @@ from plugins.commands import START_TEXT
 @mxabot.on_callback_query(filters.regex('^delete$'))
 async def delete_button(bot: Client, query: CallbackQuery):
     await query.message.delete()
-    if query.reply_to_message:
-    await query.message.reply_to_message.delete()
+   # await query.message.reply_to_message.delete()
 
 @mxabot.on_callback_query(filters.regex('^rfrsh$'))
 async def rfrsh_button(bot: Client, query: CallbackQuery):
