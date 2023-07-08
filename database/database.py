@@ -7,14 +7,15 @@ class Database:
 
     def __init__(self, uri, database_name):
         self._client = motor.motor_asyncio.AsyncIOMotorClient(uri)
-        self.db = self._client[database_name]
+        self.db = self._client[ngfilestorebot]
         self.col = self.db.users
 
 
     def new_user(self, id):
         return dict(
             id=id,
-            join_date=datetime.date.today().isoformat(),
+            join_date=datetime.date.today().isoformat()
+        )
          #   ban_status=dict(
      #           is_banned=False,
       #          ban_duration=0,
@@ -24,7 +25,7 @@ class Database:
           #      shortner=None,
              #   fsub=None
           #  )
-        )
+       # )
 
     async def add_user(self, id):
         user = self.new_user(id)
