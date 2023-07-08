@@ -24,9 +24,9 @@ async def start(client, message):
     if fsub == 400:
         return
     # me = self.get_me()
-    bot = client
+    bot = client.get_me()
     await message.reply_text(
-        START_TEXT.format(message.from_user.mention, bot.mention),
+        START_TEXT.format(message.from_user.mention, message.bot.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
