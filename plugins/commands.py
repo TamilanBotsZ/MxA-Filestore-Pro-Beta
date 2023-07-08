@@ -9,7 +9,10 @@ from pyrogram.types import (
 )
 from plugins.forcesub import force_sub
 
-START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ {}'''
+bot = client.get_me()
+bot_username = bot.username
+bot_id = bot.id
+START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ [bot_username](bot_id)'''
 
 
 #@mxabot.on_message(filters.private)
@@ -24,9 +27,8 @@ async def start(client, message):
     if fsub == 400:
         return
     # me = self.get_me()
-    bot = client.get_me()
     await message.reply_text(
-        START_TEXT.format(message.from_user.mention, message.bot.mention),
+        START_TEXT.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
