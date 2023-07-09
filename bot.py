@@ -12,7 +12,7 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-class mxaot(Client):
+class mxabot(Client):
     def __init__(self):
         super().__init__(
             "NG_FileStoreBot",
