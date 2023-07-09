@@ -9,10 +9,10 @@ from pyrogram.types import (
 )
 from plugins.forcesub import force_sub
 
-me = mxabot()
-bot = me.get_me()
-bot_name = bot.fisrst_name
-bot_id = bot.id
+bot = mxabot()
+me = await bot.get_me()
+bot_name = me.first_name
+bot_id = me.id
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ [{bot_name}]tg://user?id=bot_id)'''
 
 
