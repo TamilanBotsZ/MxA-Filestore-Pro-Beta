@@ -23,6 +23,15 @@ class mxabot(Client):
             plugins={"root": "plugins"},
             sleep_threshold=10
         )
+    
+    def start(self):
+        await super().start()
+        print("Bot started. Listening for commands...")
+
+    def run(self):
+        bot = mxabot()
+        bot.start()
+
 
 if __name__ == "__main__":
     app = mxabot()
