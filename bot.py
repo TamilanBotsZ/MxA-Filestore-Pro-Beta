@@ -28,7 +28,7 @@ class mxabot(Client):
         super().start()
         print("Bot started. Listening for commands...")
 
-    def run():
+    def run(self):
         bot = mxabot()
         bot.start()
 
