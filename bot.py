@@ -2,7 +2,7 @@ import os
 from os import getenv
 import logging
 import logging.config
-
+import asyncio
 logging.getLogger().setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
@@ -39,4 +39,4 @@ class MXABot(Client):
 
 if __name__ == "__main__":
     bot = MXABot()
-    bot.run()
+    asyncio.run(bot.run())
