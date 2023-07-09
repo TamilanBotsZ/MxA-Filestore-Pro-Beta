@@ -11,9 +11,9 @@ from plugins.forcesub import force_sub
 
 me = mxabot()
 bot = me.get_me()
-bot_username = bot.username
+bot_name = me.fisrst_name
 bot_id = bot.id
-START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ [bot_username](bot_id)'''
+START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ [{bot_name}]tg://user?id=bot_id)'''
 
 
 #@mxabot.on_message(filters.private)
