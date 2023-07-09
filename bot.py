@@ -24,14 +24,6 @@ class mxabot(Client):
             sleep_threshold=10
         )
 
-    async def start(self):
-        await super().start()
-        print("Bot started. Made my @V_Ujjwal")
-
-    async def stop(self, *args):
-        await super().stop()
-        print("Bot stopped.")
-
 if __name__ == "__main__":
-    bot = mxabot()
-    asyncio.get_event_loop().run_until_complete(bot.run())
+    app = mxabot()
+    app.run()
