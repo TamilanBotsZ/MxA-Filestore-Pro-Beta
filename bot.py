@@ -12,7 +12,7 @@ API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-class MXABot(Client):
+class mxaot(Client):
     def __init__(self):
         super().__init__(
             "NG_FileStoreBot",
@@ -38,5 +38,5 @@ class MXABot(Client):
         await self.stop()
 
 if __name__ == "__main__":
-    bot = MXABot()
+    bot = mxabot()
     asyncio.run(bot.run())
