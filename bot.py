@@ -34,7 +34,6 @@ class mxabot(Client):
 
     async def run(self):
         await self.start()
-        await self.idle()
 
 if __name__ == "__main__":
     bot = mxabot()
