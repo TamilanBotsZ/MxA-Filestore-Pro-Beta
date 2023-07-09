@@ -39,4 +39,4 @@ class mxabot(Client):
 
 if __name__ == "__main__":
     bot = mxabot()
-    asyncio.run(bot.run())
+    asyncio.get_event_loop().run_until_complete(bot.run())
