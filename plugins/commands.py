@@ -24,9 +24,8 @@ async def start(client, message):
     fsub = await force_sub(client, message)
     if fsub == 400:
         return
-    bot_name, bot_id = await get_bot_info()
     await message.reply_text(
-        START_TEXT.format(message.from_user.mention, bot_name, bot_id),
+        START_TEXT.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
