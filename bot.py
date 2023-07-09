@@ -26,7 +26,7 @@ class mxabot(Client):
 
     async def start(self):
         await super().start()
-        print("Bot started. Listening for commands...")
+        print("Bot started. Made my @V_Ujjwal")
 
     async def stop(self, *args):
         await super().stop()
@@ -34,7 +34,7 @@ class mxabot(Client):
 
     async def run(self):
         await self.start()
-        await self.stop()
+        await self.idle()
 
 if __name__ == "__main__":
     bot = mxabot()
