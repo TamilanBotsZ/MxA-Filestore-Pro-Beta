@@ -32,9 +32,6 @@ class mxabot(Client):
         await super().stop()
         print("Bot stopped.")
 
-    async def run(self):
-        await self.start()
-
 if __name__ == "__main__":
     bot = mxabot()
     asyncio.get_event_loop().run_until_complete(bot.run())
