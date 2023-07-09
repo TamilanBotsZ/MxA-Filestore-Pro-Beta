@@ -6,28 +6,37 @@ import logging.config
 logging.getLogger().setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-from pyromod import listen
 from pyrogram import Client
 
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
-class mxabot(Client):
-    def main():
-        plugins = dict(root="plugins")
-        app = Client("NG_FileStoreBot",
-                     bot_token=BOT_TOKEN,
-                     api_id=API_ID,
-                     api_hash=API_HASH,
-                     plugins=plugins,
-                     workers=300,
-                     sleep_threshold=10,
-                     in_memory=True
-                    )
+class MXABot(Client):
+    def __init__(self):
+        super().__init__(
+            "NG_FileStoreBot",
+            bot_token=BOT_TOKEN,
+            api_id=API_ID,
+            api_hash=API_HASH,
+            workers=300,
+            plugins={"root": "plugins"},
+            sleep_threshold=10
+        )
 
-        app.run()
+    async def start(self):
+        await super().start()
+        print("Bot started. Listening for commands...")
 
+    async def stop(self, *args):
+        await super().stop()
+        print("Bot stopped.")
+
+    async def run(self):
+        await self.start()
+        await self.idle()
+        await self.stop()
 
 if __name__ == "__main__":
-    mxabot.main()
+    bot = MXABot()
+    bot.run()
