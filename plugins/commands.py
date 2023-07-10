@@ -13,10 +13,6 @@ from plugins.forcesub import force_sub
 
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 
-#@mxabot.on_message(filters.private)
-#async def _(client, message):
-#    await adduser(client, message)
-#    return
 
 
 @mxabot.on_message(filters.private)
