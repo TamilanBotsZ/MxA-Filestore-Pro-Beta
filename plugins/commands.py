@@ -7,6 +7,8 @@ from pyrogram.types import (
     CallbackQuery,
     Message
 )
+from pyrogram.types import BotCommand
+
 from plugins.forcesub import force_sub
 
 
@@ -23,6 +25,7 @@ def handle_private_message(Client, message: Message):
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
     await handle_private_message()
+else:
     await message.delete()
     fsub = await force_sub(client, message)
     if fsub == 400:
