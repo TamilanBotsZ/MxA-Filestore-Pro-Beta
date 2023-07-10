@@ -1,6 +1,6 @@
 import datetime
 import motor.motor_asyncio
-from configs import Config
+from configs import *
 
 
 class Database:
@@ -30,6 +30,8 @@ class Database:
     async def add_user(self, id):
         user = self.new_user(id)
         await self.col.insert_one(user)
+
+    
     async def is_user_exist(self, id):
         user = await self.col.find_one({'id': int(id)})
         return True if user else False
@@ -43,4 +45,4 @@ class Database:
         return all_user
 
 
-db = Database(Config.DATABASE_URL, Config.BOT_USERNAME)
+db = Database(DATABASE_URL, BOT_USERNAME)
