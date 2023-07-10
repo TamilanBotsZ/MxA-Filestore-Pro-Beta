@@ -5,27 +5,19 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
     CallbackQuery,
-    Message
+    Message,
+    BotCommand
 )
-from pyrogram.types import BotCommand
-
 from plugins.forcesub import force_sub
-
-
 
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 
-
-
-def handle_private_message(Client, message: Message):
-    adduser(Client, message)
-    return
-
+def handle_private_message(client: Client, message: Message):
+    add_user_to_database(client, message)
 
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
-    await handle_private_message()
-    return
+    await handle_private_message(client, message)
     await message.delete()
     fsub = await force_sub(client, message)
     if fsub == 400:
@@ -37,7 +29,7 @@ async def start(client, message):
             [
                 [
                     InlineKeyboardButton("Dev 👨‍💻", user_id="6112935306"),
-                    InlineKeyboardButton("Close ❌", callback_data=f"delete")
+                    InlineKeyboardButton("Close ❌", callback_data="delete")
                 ]
             ]
         )
