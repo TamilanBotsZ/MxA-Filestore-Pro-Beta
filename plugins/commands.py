@@ -13,7 +13,7 @@ from plugins.forcesub import force_sub
 START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ Bᴏᴛ!'''
 
 def handle_private_message(client: Client, message: Message):
-    add_user_to_database(client, message)
+    adduser(client, message)
 
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
