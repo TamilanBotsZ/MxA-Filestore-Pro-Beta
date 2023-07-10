@@ -15,8 +15,14 @@ START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ B
 
 #@mxabot.on_message(filters.private)
 #async def _(client, message):
-#    await add_user_in_db(client, message)
+#    await adduser(client, message)
 #    return
+
+
+@mxabot.on_message(filters.private)
+async def handle_private_message(Client, message: Message):
+    await adduser(Client, message)
+
 
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
