@@ -5,7 +5,7 @@ from pyrogram.types import Message
 from bot import mxabot
 
 
-async def add_user(Client, message: Message):
+async def adduser(Client, message: Message):
     if not await db.is_user_exist(message.from_user.id):
         await db.add_user(message.from_user.id)
         if LOG_CHANNEL is not None:
