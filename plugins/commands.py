@@ -16,7 +16,7 @@ START_TEXT = '''Hᴇʟʟᴏ {}, I Aᴍ MxA Pɪᴍɪᴜᴍ Fɪʟᴇsᴛᴏʀᴇ B
 
 
 def handle_private_message(Client, message: Message):
-    await adduser(Client, message)
+    adduser(Client, message)
     return
 
 
