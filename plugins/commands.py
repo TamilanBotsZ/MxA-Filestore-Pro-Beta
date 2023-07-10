@@ -25,7 +25,7 @@ def handle_private_message(Client, message: Message):
 @mxabot.on_message(filters.command('start'))
 async def start(client, message):
     await handle_private_message()
-else:
+    return
     await message.delete()
     fsub = await force_sub(client, message)
     if fsub == 400:
